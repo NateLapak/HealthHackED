@@ -1,3 +1,4 @@
+
 const Home = () => {
     return (
         <div>
@@ -6,35 +7,43 @@ const Home = () => {
             <form>
                 <label>Age</label>
                 <br />
-                <input></input>
-
+                <input type="number" name="Age" min="1" max="120"></input>
                 <br />
 
-                <label>Weight</label>
+                <label>Weight (kg)</label>
                 <br />
-                <input></input>
+                <input type="number" name="Weight" min="5" max="250"></input>
+                <br />
 
+                <label>Height (cm)</label>
                 <br />
-
-                <label>Height</label>
-                <br />
-                <input></input>
+                <input type="number" name="Height" min="10" max="300" step="0.01"></input>
                 <br />
                 
                 <label>Race</label>
                 <br />
-                <input></input>
+                <select name="gender">
+                    <option value="White">White</option>
+                    <option value="Asian">Asian</option>
+                    <option value="Black">Black</option>
+                    <option value="Indigenous">Indigenous</option>
+                    <option value="Other">Other</option>
+                </select>
                 <br />
 
                 <label>Gender</label>
                 <br />
-                <input></input>
+
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
 
                 <br />
 
-                <label>How many hours of workout a week?</label>
+                <label>How many hours do you workout a week?</label>
                 <br />
-                <input></input>
+                <input type="number" name="Hours" min="0" max="24"></input>
 
                 <br/>
 
@@ -42,6 +51,19 @@ const Home = () => {
                 <br />
                 <input type="checkbox"></input>
 
+                <br/>
+
+                <label>Spirometer data:</label>
+                <br/>
+                <input type="number"></input>
+                <p>If you need help to determine spirometer data, click <a href="https://www.healthline.com/health/spirometry#procedure">Here</a></p>
+
+                <br />
+
+                <label>Heart rate:</label>
+                <input type="number" name="Heart-rate" min="1" max="150"></input>
+                <br/>
+                <input type="submit" value="Submit"></input>
             </form>
         </div>
     )
