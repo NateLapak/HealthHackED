@@ -1,7 +1,27 @@
-
+import React, { useState, useEffect } from "react";
 const Home = () => {
+
+    const [data, setdata] = useState({
+        age: 8,
+    });
+
+    useEffect(() => {
+        // Using fetch to fetch the api from 
+        // flask server it will be redirected to proxy
+
+        fetch("/data").then((res) =>
+            res.json().then((data) => {
+                // Setting a data from api
+                setdata({
+                    age: data.Age,
+                });
+            })
+        );
+    }, []);
+
     return (
         <div>
+            <p>{data.age}</p>
             <h2>Health App</h2>
 
             <form>
