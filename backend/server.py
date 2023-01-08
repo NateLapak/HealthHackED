@@ -21,14 +21,15 @@ def get_time():
   
 @app.route('/calculate', methods=['POST'])
 def calculate():
+    inputJson = request.get_json()
 
-    sex = "male"
-    age = 22
-    ethnicity = "Mexican American"
-    height = 123
+    sex = inputJson.get("gender")
+    age = int(inputJson.get("age"))
+    ethnicity = inputJson.get("race")
+    height = int(inputJson.get("height"))
     dataType = "FEV1"
 
-    path = 'dataset/{}/{}/lower limit/{}.csv'.format(sex, ethnicity, dataType)
+    path = 'dataset/{}/{}/lower limits/{}.csv'.format(sex, ethnicity, dataType)
 
     df = pd.read_csv(path)
     df = df.iloc[: , 1:]
@@ -39,7 +40,7 @@ def calculate():
     data = value[str(find_nearest(df.columns[1:].array.astype(int), age))]
     data.values[0] 
 
-    I_FEV1 = 3
+    I_FEV1 = float(inputJson.get("fev1"))
     result = ""
 
     if (I_FEV1 > data.values[0]):
@@ -47,9 +48,6 @@ def calculate():
     elif (I_FEV1 < data.values[0]):
         result = "abnormal"
 
-
-    someJson = request.get_json()
-    #print(someJson)
     return jsonify({"result": result}), 201
 
     

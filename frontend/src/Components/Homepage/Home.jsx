@@ -57,11 +57,9 @@ const Home = () => {
                         <label>Race</label>
                         <br />
                         <Select name="race" onChange={(e) => setRace(e.target.value)}>
-                            <option value="White">White</option>
-                            <option value="Asian">Asian</option>
-                            <option value="Black">Black</option>
-                            <option value="Indigenous">Indigenous</option>
-                            <option value="Other">Other</option>
+                            <option value="Caucasian">Caucasian</option>
+                            <option value="African American">African American</option>
+                            <option value="Mexican American">Mexican American</option>
                         </Select>
                     </Container>
 
