@@ -1,8 +1,10 @@
+import {Box, Container, Text, Input, Select} from '@chakra-ui/react'
 import React, { useState, useEffect } from "react";
-const Home = () => {
 
+const Home = () => {
+    
     const [data, setdata] = useState({
-        age: 8,
+        age: 0,
     });
 
     useEffect(() => {
@@ -20,72 +22,88 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
-            <p>{data.age}</p>
-            <h2>Health App</h2>
+        <Box>
+            <Container>
 
-            <form>
-                <label>Age</label>
-                <br />
-                <input type="number" name="Age" min="1" max="120"></input>
-                <br />
+                <Text m={5} fontSize={[30, 40, 60, 65]} textAlign="center">
+                Health App
+                </Text>
 
-                <label>Weight (kg)</label>
-                <br />
-                <input type="number" name="Weight" min="5" max="250"></input>
-                <br />
+                <Text m={2} fontSize={[10, 15, 20, 25]} textAlign="center">Please enter some basic info that will be accessed</Text>
+                <form>
+                    <Container my={3}>
+                        <label>Age</label>
+                        <br />
+                        <Input type="number" name="Age" min="1" max="120" placeholder='Enter age here'></Input>
+                        <br />
+                    </Container>
 
-                <label>Height (cm)</label>
-                <br />
-                <input type="number" name="Height" min="10" max="300" step="0.01"></input>
-                <br />
-                
-                <label>Race</label>
-                <br />
-                <select name="gender">
-                    <option value="White">White</option>
-                    <option value="Asian">Asian</option>
-                    <option value="Black">Black</option>
-                    <option value="Indigenous">Indigenous</option>
-                    <option value="Other">Other</option>
-                </select>
-                <br />
+                    <Container my={3}>
+                        <label>Weight (kg)</label>
+                        <br />
+                        <Input type="number" name="Weight" min="5" max="250" placeholder="Enter weight in kg"></Input>
+                        <br />
+                    </Container>
 
-                <label>Gender</label>
-                <br />
+                    <Container my={3}>
+                        <label>Height (cm)</label>
+                        <br />
+                        <Input type="number" name="Height" min="10" max="300" step="0.01" placeholder="enter height in cm"></Input>
+                        <br />
+                    </Container>
+                    
+                    <Container my={5}>
+                        <label>Race</label>
+                        <br />
+                        <Select name="gender">
+                            <option value="White">White</option>
+                            <option value="Asian">Asian</option>
+                            <option value="Black">Black</option>
+                            <option value="Indigenous">Indigenous</option>
+                            <option value="Other">Other</option>
+                        </Select>
+                    </Container>
 
-                <select name="gender">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
+                    <Container my={5}>
+                        <label>Gender</label>
+                        <br />
+                        <Select name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </Select>   
+                    </Container>
 
-                <br />
+                    <Container my={5}>
+                        <label>How many hours do you workout a week?</label>
+                        <br />
+                        <Input type="number" name="Hours" min="0" max="24"></Input>
+                    </Container>
 
-                <label>How many hours do you workout a week?</label>
-                <br />
-                <input type="number" name="Hours" min="0" max="24"></input>
 
-                <br/>
+                    <Container my={5}>
+                        <label>Do you smoke?</label>
+                        <br />
+                        <Input type="checkbox"></Input>
+                    </Container>
 
-                <label>Do you smoke?</label>
-                <br />
-                <input type="checkbox"></input>
+                    <Container my={5}>
+                        <label>Spirometer data:</label>
+                        <br/>
+                        <Input type="number"></Input>
+                        <p>If you need help to determine spirometer data, click <a href="https://www.healthline.com/health/spirometry#procedure">Here</a></p>
+                    </Container>
 
-                <br/>
+                    <Container my={5}>
+                        <label>Heart rate:</label>
+                        <Input type="number" name="Heart-rate" min="1" max="150"></Input>
+                        <br/>
+                    </Container>
+                    
+                    <Input className="#2B6CB0" type="submit" value="Submit" my={5}></Input>
+                </form>
 
-                <label>Spirometer data:</label>
-                <br/>
-                <input type="number"></input>
-                <p>If you need help to determine spirometer data, click <a href="https://www.healthline.com/health/spirometry#procedure">Here</a></p>
-
-                <br />
-
-                <label>Heart rate:</label>
-                <input type="number" name="Heart-rate" min="1" max="150"></input>
-                <br/>
-                <input type="submit" value="Submit"></input>
-            </form>
-        </div>
+            </Container>
+        </Box>
     )
 }
 
