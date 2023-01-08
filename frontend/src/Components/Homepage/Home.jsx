@@ -30,7 +30,7 @@ const Home = () => {
                 </Text>
 
                 <Text m={2} fontSize={[10, 15, 20, 25]} textAlign="center">Please enter some basic info that will be accessed</Text>
-                <form>
+                <form method='POST' action='/handle_data'>
                     <Container my={3}>
                         <label>Age</label>
                         <br />
@@ -48,7 +48,7 @@ const Home = () => {
                     <Container my={3}>
                         <label>Height (cm)</label>
                         <br />
-                        <Input type="number" name="Height" min="10" max="300" step="0.01" placeholder="enter height in cm"></Input>
+                        <Input type="number" name="Height" min="10" max="300" step="0.01" placeholder="Enter height in cm"></Input>
                         <br />
                     </Container>
                     
@@ -76,26 +76,29 @@ const Home = () => {
                     <Container my={5}>
                         <label>How many hours do you workout a week?</label>
                         <br />
-                        <Input type="number" name="Hours" min="0" max="24"></Input>
+                        <Input type="number" name="Hours" min="0" max="24" placeholder='Enter hours of working out'></Input>
                     </Container>
 
 
                     <Container my={5}>
                         <label>Do you smoke?</label>
                         <br />
-                        <Input type="checkbox"></Input>
+                        <Select name="smoke">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </Select>
                     </Container>
 
                     <Container my={5}>
                         <label>Spirometer data:</label>
                         <br/>
-                        <Input type="number"></Input>
+                        <Input type="number" placeholder='Enter data here'></Input>
                         <p>If you need help to determine spirometer data, click <a href="https://www.healthline.com/health/spirometry#procedure">Here</a></p>
                     </Container>
 
                     <Container my={5}>
                         <label>Heart rate:</label>
-                        <Input type="number" name="Heart-rate" min="1" max="150"></Input>
+                        <Input placeHolder="Enter heart rate here" type="number" name="Heart-rate" min="1" max="150"></Input>
                         <br/>
                     </Container>
                     

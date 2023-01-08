@@ -41,14 +41,6 @@ const Navbar = () => {
             {isOpen ? (
                 <Box pb={4} display={{ md: 'none' }}>
                     <Stack as={'nav'} spacing={4}>
-                    
-                        <Link color="white"  to="/register" px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: "gray.200"}}>
-                            Register
-                        </Link>
-
-                        <Link color="white" to="/login" px={2} py={1} rounded={'md'} _hover={{ textDecoration: 'none', bg: "gray.200"}}>
-                            Login
-                        </Link>
 
                     </Stack>
                 </Box>
