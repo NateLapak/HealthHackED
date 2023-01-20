@@ -18,7 +18,7 @@ The backend is to be deployed with Heroku. <br>
 
 <div align="left">
   <p>
-    <img width="300" src="https://github.com/RonggangCui/QRChaser/blob/main/doc/AppScreenshots/AppScreenshots-01.png"></a>
+    <img width="300" src="https://github.com/RonggangCui/Spirometry-HackED/blob/main/documents/main_page.png"></a>
   </p>
 </div>
 
