@@ -1,20 +1,27 @@
-# HealthHackED
+## <div align="center">HealthHackED</div>
 
-## Inspiration
-Measuring health data and derive meaningful health advice will greatly improve the quality of life.
+<div align="center">
+  <p>
+     This web app can check if someone has normal or abnormal spirometry test result.
+  </p>
+</div>
 
-## What it does
-It tells if your lung functionality is normal or not.
+## <div align="center">Software Design</div>
+Developed using React and Flask <br>
+The frontedn is hosted with netlify at https://spirometrytest.netlify.app <br>
+The backend is to be deployed with Heroku. <br>
 
-## How we built it
-We used React, ChakraUI and Flask to build the website. 
 
-## Challenges we ran into
-Connecting frontend with backend.
+## <div align="center">User Manual</div>
 
-## Accomplishments that we're proud of
-We built a web application in a day.
+#### A user can enter their physical infomation and the test result produced by a spirometry test. After clicking submit, you will see if your test result is within the healthy range.
 
-## What we learned
-React, python, flask
-## What's next for HealthHackED
+<div align="left">
+  <p>
+    <img width="300" src="https://github.com/RonggangCui/QRChaser/blob/main/doc/AppScreenshots/AppScreenshots-01.png"></a>
+  </p>
+</div>
+
+
+
+
